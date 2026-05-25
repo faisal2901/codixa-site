@@ -213,11 +213,19 @@ section {
   box-shadow: var(--glow-cyan);
 }
 
+.logo {
+  max-width: 240px !important;
+  max-height: 56px !important;
+  overflow: hidden;
+}
+
 .logo-img {
-  height: 44px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+  height: 48px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  display: block !important;
+  object-fit: contain !important;
   filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.25));
   transition: filter 0.3s ease;
 }
@@ -227,12 +235,18 @@ section {
 }
 
 footer .logo-img {
-  height: 40px;
+  height: 42px !important;
+  max-height: 42px !important;
 }
 
 @media (max-width: 600px) {
   .logo-img {
-    height: 36px;
+    height: 38px !important;
+    max-height: 38px !important;
+    max-width: 160px !important;
+  }
+  .logo {
+    max-width: 170px !important;
   }
 }
 
