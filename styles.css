@@ -213,6 +213,29 @@ section {
   box-shadow: var(--glow-cyan);
 }
 
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.25));
+  transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.45));
+}
+
+footer .logo-img {
+  height: 40px;
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    height: 36px;
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: center;
