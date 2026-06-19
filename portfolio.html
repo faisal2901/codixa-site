@@ -45,6 +45,27 @@
   "sameAs": ["https://wa.me/919177304813"]
 }
 </script>
+
+  <style>
+    /* Override portfolio image cards for SVG icons */
+    .project-image {
+      height: 200px !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-bottom: 1px solid var(--border) !important;
+    }
+    .project-image svg {
+      filter: drop-shadow(0 0 20px rgba(0,229,255,0.3));
+      animation: portfolioFloat 5s ease-in-out infinite;
+    }
+    @keyframes portfolioFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
 </head>
 <body>
 
@@ -52,7 +73,21 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="logo">
-        <img src="logo.png" alt="Codixa - Software Development Studio" class="logo-img" style="height:48px;width:auto;max-width:200px;max-height:48px;object-fit:contain;display:block;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" style="height:38px;width:auto;display:block;">
+          <defs>
+            <linearGradient id="cxg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff"/>
+              <stop offset="100%" stop-color="#b026ff"/>
+            </linearGradient>
+          </defs>
+          <g>
+            <path d="M 35 8 A 17 17 0 1 0 35 42" fill="none" stroke="url(#cxg1)" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 17 17 L 33 33" stroke="url(#cxg1)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M 33 17 L 17 33" stroke="url(#cxg1)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="25" cy="25" r="2" fill="url(#cxg1)"/>
+          </g>
+          <text x="55" y="34" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.03em">Codixa</text>
+        </svg>
       </a>
       <button class="menu-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -77,13 +112,155 @@
     </div>
   </section>
 
+
+  <!-- FEATURED PROJECT -->
+  <section style="padding-top: 16px; padding-bottom: 0;">
+    <div class="container">
+      <div class="section-header fade-up" style="margin-bottom: 32px;">
+        <span class="section-tag" style="background: rgba(0, 255, 149, 0.12); border-color: rgba(0, 255, 149, 0.3); color: var(--neon-green);">★ Featured Project</span>
+        <h2>Our first live build, <span class="gradient-text">JobTopper</span></h2>
+        <p>An AI-powered career platform we designed and shipped for job seekers across India and beyond. Live in production.</p>
+      </div>
+
+      <a href="https://jobtopper.vercel.app/" target="_blank" rel="noopener" class="featured-project fade-up">
+        <div class="featured-project-inner">
+          <div class="featured-project-visual">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" style="width:100%;height:auto;display:block;">
+              <defs>
+                <linearGradient id="jtg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff"/>
+                  <stop offset="100%" stop-color="#b026ff"/>
+                </linearGradient>
+              </defs>
+              <!-- Browser chrome -->
+              <rect x="10" y="10" width="300" height="200" rx="14" fill="#0a0a14" stroke="#2a2a3a" stroke-width="1.5"/>
+              <rect x="10" y="10" width="300" height="28" rx="14" fill="#14141f"/>
+              <circle cx="24" cy="24" r="4" fill="#ff5f57"/>
+              <circle cx="38" cy="24" r="4" fill="#febc2e"/>
+              <circle cx="52" cy="24" r="4" fill="#28c840"/>
+              <rect x="70" y="18" width="120" height="12" rx="3" fill="#1f1f30"/>
+              <!-- Search bar -->
+              <rect x="26" y="52" width="268" height="32" rx="16" fill="url(#jtg)" opacity="0.15" stroke="url(#jtg)" stroke-width="1"/>
+              <circle cx="44" cy="68" r="5" fill="none" stroke="url(#jtg)" stroke-width="1.5"/>
+              <line x1="48" y1="72" x2="52" y2="76" stroke="url(#jtg)" stroke-width="1.5"/>
+              <text x="60" y="72" font-family="Inter" font-size="9" fill="#b8b8d0">Search 10,000+ jobs</text>
+              <!-- Job cards -->
+              <rect x="26" y="96" width="130" height="56" rx="8" fill="#12121f" stroke="#2a2a3a"/>
+              <rect x="34" y="104" width="50" height="8" rx="2" fill="url(#jtg)"/>
+              <rect x="34" y="118" width="100" height="6" rx="2" fill="#3a3a4a"/>
+              <rect x="34" y="130" width="60" height="6" rx="2" fill="#3a3a4a"/>
+              <rect x="34" y="140" width="36" height="8" rx="4" fill="rgba(0,255,149,0.15)" stroke="rgba(0,255,149,0.5)"/>
+
+              <rect x="164" y="96" width="130" height="56" rx="8" fill="#12121f" stroke="#2a2a3a"/>
+              <rect x="172" y="104" width="50" height="8" rx="2" fill="url(#jtg)"/>
+              <rect x="172" y="118" width="100" height="6" rx="2" fill="#3a3a4a"/>
+              <rect x="172" y="130" width="60" height="6" rx="2" fill="#3a3a4a"/>
+              <rect x="172" y="140" width="36" height="8" rx="4" fill="rgba(0,255,149,0.15)" stroke="rgba(0,255,149,0.5)"/>
+
+              <!-- AI assistant orb -->
+              <circle cx="280" cy="180" r="20" fill="url(#jtg)" opacity="0.25"/>
+              <circle cx="280" cy="180" r="14" fill="url(#jtg)"/>
+              <text x="280" y="184" font-family="Inter" font-size="10" font-weight="800" fill="#07070d" text-anchor="middle">AI</text>
+
+              <!-- Bottom text -->
+              <rect x="26" y="170" width="80" height="6" rx="2" fill="#2a2a3a"/>
+              <rect x="26" y="182" width="120" height="6" rx="2" fill="#2a2a3a"/>
+            </svg>
+          </div>
+
+          <div class="featured-project-content">
+            <div class="featured-project-meta">
+              <span class="tech-pill" style="background: rgba(0, 255, 149, 0.12); border-color: rgba(0, 255, 149, 0.3); color: var(--neon-green);">● Live in production</span>
+              <span class="tech-pill">Career Tech</span>
+            </div>
+            <h3 style="font-size: 1.8rem; margin: 12px 0 14px;">JobTopper — AI Career Co-pilot</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 18px;">
+              A modern AI-powered platform helping job seekers find better roles, polish resumes, prep for interviews, and apply smarter. Built with a focus on the Indian job market with global expansion in mind.
+            </p>
+            <ul style="display: grid; gap: 8px; margin-bottom: 20px;">
+              <li style="display: flex; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><span style="color: var(--neon-green);">✓</span> AI-powered job recommendations</li>
+              <li style="display: flex; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><span style="color: var(--neon-green);">✓</span> Resume optimization with AI feedback</li>
+              <li style="display: flex; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><span style="color: var(--neon-green);">✓</span> Interview prep & mock practice</li>
+              <li style="display: flex; gap: 10px; color: var(--text-secondary); font-size: 0.95rem;"><span style="color: var(--neon-green);">✓</span> Built and shipped end-to-end by our team</li>
+            </ul>
+            <div class="tech-stack" style="margin-bottom: 22px;">
+              <span class="tech-pill">Next.js</span>
+              <span class="tech-pill">Vercel</span>
+              <span class="tech-pill">AI Integration</span>
+              <span class="tech-pill">Tailwind</span>
+            </div>
+            <span class="btn btn-primary">Visit live site →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT STYLES (inline) -->
+  <style>
+    .featured-project {
+      display: block;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-project::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,229,255,0.05), rgba(176,38,255,0.05));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .featured-project:hover {
+      transform: translateY(-4px);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(0,229,255,0.2);
+    }
+    .featured-project:hover::before { opacity: 1; }
+    .featured-project-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .featured-project-visual {
+      background: linear-gradient(135deg, rgba(0,229,255,0.08), rgba(176,38,255,0.08));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-strong);
+      padding: 20px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+    .featured-project-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 880px) {
+      .featured-project { padding: 24px; }
+      .featured-project-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+  </style>
+
   <!-- CAPABILITIES GRID -->
   <section style="padding-top: 16px;">
     <div class="container">
       <div class="portfolio-grid">
 
         <div class="project-card fade-up">
-          <div class="project-image" style="font-size: 3rem;">🌐</div>
+          <div class="project-image" style="background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(176,38,255,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gw" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gw)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="22"/><line x1="10" y1="32" x2="54" y2="32"/><path d="M32 10c5 6 8 14 8 22s-3 16-8 22c-5-6-8-14-8-22s3-16 8-22z"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">Websites</span>
             <h3>Marketing sites & landing pages</h3>
@@ -98,7 +275,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-1" style="font-size: 3rem;">🛒</div>
+          <div class="project-image alt-1" style="background: linear-gradient(135deg, rgba(176,38,255,0.1), rgba(255,45,156,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gc" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gc)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="50" r="3"/><circle cx="44" cy="50" r="3"/><path d="M8 12h6l4 26h28l4-18H18"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">E-commerce</span>
             <h3>D2C stores & online shops</h3>
@@ -112,7 +292,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-2" style="font-size: 3rem;">📱</div>
+          <div class="project-image alt-2" style="background: linear-gradient(135deg, rgba(0,255,149,0.1), rgba(0,229,255,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gp" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gp)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="6" width="28" height="52" rx="5"/><line x1="28" y1="50" x2="36" y2="50"/><line x1="26" y1="12" x2="38" y2="12"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">Mobile Apps</span>
             <h3>iOS + Android apps</h3>
@@ -126,7 +309,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-3" style="font-size: 3rem;">⚡</div>
+          <div class="project-image alt-3" style="background: linear-gradient(135deg, rgba(255,45,156,0.1), rgba(0,229,255,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gl)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8L8 20l24 12 24-12L32 8z"/><path d="M8 32l24 12 24-12"/><path d="M8 44l24 12 24-12"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">SaaS Platforms</span>
             <h3>Full-stack SaaS MVPs</h3>
@@ -141,7 +327,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-4" style="font-size: 3rem;">🤖</div>
+          <div class="project-image alt-4" style="background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(0,255,149,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gai" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gai)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="14" width="36" height="36" rx="4"/><rect x="22" y="22" width="20" height="20" rx="2"/><line x1="22" y1="6" x2="22" y2="14"/><line x1="32" y1="6" x2="32" y2="14"/><line x1="42" y1="6" x2="42" y2="14"/><line x1="22" y1="50" x2="22" y2="58"/><line x1="32" y1="50" x2="32" y2="58"/><line x1="42" y1="50" x2="42" y2="58"/><line x1="6" y1="22" x2="14" y2="22"/><line x1="6" y1="32" x2="14" y2="32"/><line x1="6" y1="42" x2="14" y2="42"/><line x1="50" y1="22" x2="58" y2="22"/><line x1="50" y1="32" x2="58" y2="32"/><line x1="50" y1="42" x2="58" y2="42"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">AI Features</span>
             <h3>AI chatbots & smart tools</h3>
@@ -156,7 +345,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-5" style="font-size: 3rem;">📊</div>
+          <div class="project-image alt-5" style="background: linear-gradient(135deg, rgba(176,38,255,0.1), rgba(0,229,255,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gd" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gd)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="56" x2="56" y2="56"/><rect x="14" y="38" width="8" height="18"/><rect x="28" y="26" width="8" height="30"/><rect x="42" y="14" width="8" height="42"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">Dashboards</span>
             <h3>Internal tools & dashboards</h3>
@@ -170,7 +362,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image" style="font-size: 3rem;">🎨</div>
+          <div class="project-image" style="background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(176,38,255,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gpa" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gpa)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8C19 8 8 19 8 32s11 24 24 24h6c4 0 7-3 7-7 0-2-1-3-2-4-1-1-2-2-2-4 0-4 3-7 7-7h4c5 0 9-4 9-9 0-9-13-17-29-17z"/><circle cx="22" cy="26" r="3"/><circle cx="32" cy="20" r="3"/><circle cx="42" cy="26" r="3"/><circle cx="46" cy="36" r="3"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">Design</span>
             <h3>UI/UX & brand identity</h3>
@@ -184,7 +379,10 @@
         </div>
 
         <div class="project-card fade-up">
-          <div class="project-image alt-1" style="font-size: 3rem;">🔌</div>
+          <div class="project-image alt-1" style="background: linear-gradient(135deg, rgba(176,38,255,0.1), rgba(255,45,156,0.1));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" style="width:80px;height:80px;display:block;margin:0 auto;">
+              <defs><linearGradient id="gi" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#b026ff"/></linearGradient></defs>
+              <g fill="none" stroke="url(#gi)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 28h-4a4 4 0 00-4 4v0a4 4 0 004 4h4"/><path d="M48 28h4a4 4 0 014 4v0a4 4 0 01-4 4h-4"/><rect x="16" y="20" width="32" height="24" rx="3"/><line x1="24" y1="44" x2="24" y2="56"/><line x1="40" y1="44" x2="40" y2="56"/></g>
+            </svg></div>
           <div class="project-body">
             <span class="project-tag">Integrations</span>
             <h3>APIs & custom integrations</h3>
@@ -235,7 +433,21 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <img src="logo.png" alt="Codixa" class="logo-img" style="height:42px;width:auto;max-width:180px;max-height:42px;object-fit:contain;display:block;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" style="height:34px;width:auto;display:block;">
+            <defs>
+              <linearGradient id="cxg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00e5ff"/>
+                <stop offset="100%" stop-color="#b026ff"/>
+              </linearGradient>
+            </defs>
+            <g>
+              <path d="M 35 8 A 17 17 0 1 0 35 42" fill="none" stroke="url(#cxg2)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M 17 17 L 33 33" stroke="url(#cxg2)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M 33 17 L 17 33" stroke="url(#cxg2)" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="25" cy="25" r="2" fill="url(#cxg2)"/>
+            </g>
+            <text x="55" y="34" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.03em">Codixa</text>
+          </svg>
           </a>
           <p>Codixa is a design and development studio building websites, apps, and SaaS for businesses worldwide. Honest pricing, fast delivery, real team.</p>
         </div>
@@ -279,3 +491,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
